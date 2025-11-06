@@ -1,0 +1,73 @@
+package com.barabad.albayreality.components
+
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.material3.Text
+
+@Composable
+fun ButtonTypeA(
+    imageRes: Int,              // Resource ID of the background image
+    title: String,              // Main text (e.g., "Interactive Map")
+    subtitle: String,           // Sub text (e.g., "Discover locations in Albay")
+    onClick: () -> Unit         // What happens when clicked
+) {
+    BoxWithConstraints(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 22.dp)
+    ) {
+
+        // # If screen is > 500.dp (it is on large screen), scale the height using 40% of the screen width. Else, default to 200.dp
+        val cardHeight = if (maxWidth > 500.dp) maxWidth * 0.40f else 200.dp
+
+        Surface(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(cardHeight)
+                .clickable { onClick() },
+            shape = RoundedCornerShape(12.dp),
+            shadowElevation = 4.dp,
+        ) {
+            Box {
+                Image(
+                    painter = painterResource(id = imageRes),
+                    contentDescription = title,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxSize()
+                )
+
+                Column(
+                    modifier = Modifier
+                        .align(Alignment.BottomStart)
+                        .padding(16.dp)
+                ) {
+                    Text(
+                        text = title,
+                        fontSize = 18.sp,
+                        style = MaterialTheme.typography.titleMedium,
+                        color = Color.White
+                    )
+                    Text(
+                        text = subtitle,
+                        fontSize = 12.sp,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = Color.White
+                    )
+                }
+            }
+        }
+    }
+}

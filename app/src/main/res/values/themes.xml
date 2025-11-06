@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main app theme -->
+    <style name="Theme.AlbayReality" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- App background color -->
+        <item name="android:windowBackground">#EFEFEF</item>
+
+        <!-- Allow layout to extend behind the status bar (status bar stays visible) -->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+
+        <!-- Transparent system bars for edge-to-edge look -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!-- Optional: make icons dark for visibility -->
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+    <!-- Splash screen theme -->
+    <style name="Theme.AlbayReality.Splash" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Use your splash image as background -->
+        <!-- <item name="android:windowBackground">@drawable/splash_bg</item> -->
+
+        <!-- Transparent system bars for edge-to-edge look -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!-- Optional: make icons dark for visibility -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+</resources>

@@ -71,16 +71,37 @@ fun ArSuccessScan(navController: NavController) {
                     .background(Color.Green.copy(alpha = 0.1f)),
                 contentAlignment = Alignment.Center
             ) {
-
-                Text(
-                    text = "Scan Successful!\n<Insert 3D model> $qrContent ",
-                    fontFamily = Inter,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 16.sp,
-                    color = Color(0xFF388E3C), // Dark green
-                    lineHeight = 20.sp
-                )
-                //do cases of 3d model here
+                if (qrContent?.contains("cagsawa") == true){
+                    // display model
+                    Text(
+                        text = "Scan Successful!\n<Insert 3D model of Cagsawa here>",
+                        fontFamily = Inter,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 16.sp,
+                        color = Color(0xFF388E3C), // Dark green
+                        lineHeight = 20.sp
+                    )
+                } else if(qrContent?.contains("munisipyo") == true){
+                    // display model
+                    Text(
+                        text = "Scan Successful!\n<Insert 3D model of Munisipyo here>",
+                        fontFamily = Inter,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 16.sp,
+                        color = Color(0xFF388E3C), // Dark green
+                        lineHeight = 20.sp
+                    )
+                } else if(qrContent?.contains("church") == true){
+                    // display model
+                    Text(
+                        text = "Scan Successful!\n<Insert 3D model of church here>",
+                        fontFamily = Inter,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 16.sp,
+                        color = Color(0xFF388E3C), // Dark green
+                        lineHeight = 20.sp
+                    )
+                }
             }
 
             Spacer(modifier = Modifier.height(24.dp))
@@ -97,3 +118,4 @@ fun ArSuccessScan(navController: NavController) {
         }
     }
 }
+

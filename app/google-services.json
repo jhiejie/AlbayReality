@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "981802412274",
+    "firebase_url": "https://albay-reality-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "albay-reality",
+    "storage_bucket": "albay-reality.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981802412274:android:d68b4655f4dcb808a2c86b",
+        "android_client_info": {
+          "package_name": "com.barabad.albayreality"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpbhTmkltCIPkTJalLxUIP0YAqKiH9s80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

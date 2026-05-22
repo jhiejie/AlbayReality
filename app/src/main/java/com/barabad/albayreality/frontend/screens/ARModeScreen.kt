@@ -172,7 +172,7 @@ fun ModelDisplay(modelName: String?) {
             },
             onScale = { detector, _, node ->
                 if (node is ModelNode) {
-                    node.scale = node.scale * detector.scaleFactor * 0.3f
+                    node.scale = node.scale * detector.scaleFactor * 0.09f
                 }
                 if(node == null){
                     Toast.makeText(
@@ -187,7 +187,7 @@ fun ModelDisplay(modelName: String?) {
             }
         ),
         onSessionFailed = {
-            Toast.makeText(context, "Camera Permission Denied or ARCore not available on Device!", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Camera Permission Denied or ARCore not available on device!", Toast.LENGTH_LONG).show()
         }
     )
     trackingFailureReason?.let { reason ->
